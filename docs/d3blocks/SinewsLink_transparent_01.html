@@ -12,7 +12,7 @@ Forked      : Ian Johnson; http://bl.ocks.org/enjalot/f973a941606aa38fed321fbce0
 <head>
     <meta charset="UTF-8">
     <title>Particles - D3blocks</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Add this line -- Uche -->
+
     
 
     <style>
@@ -49,8 +49,8 @@ Forked      : Ian Johnson; http://bl.ocks.org/enjalot/f973a941606aa38fed321fbce0
     
 	/// console.log(getPlatform(), mouse_or_touch);
 
-    var width = window.innerWidth,
-    		height = window.innerHeight / 2,
+    var width = 750,
+    		height = 150,
     		radius = 3,
     		collisionStrength = 0.05;
 
@@ -58,7 +58,7 @@ Forked      : Ian Johnson; http://bl.ocks.org/enjalot/f973a941606aa38fed321fbce0
     	width: width,
     	height: height,
     	spacing: 8,
-    	fontSize: "80px"
+    	fontSize: "90px"
     };
     
     // https://observablehq.com/@d3/color-schemes
@@ -95,14 +95,6 @@ Forked      : Ian Johnson; http://bl.ocks.org/enjalot/f973a941606aa38fed321fbce0
     var svg = d3.select("body").append("svg")
     	.attr("width", width)
     	.attr("height", height);
-
-    
-    // Add the resize event listener here  --- Added the chunk of code 'window.add....' below
-    window.addEventListener('resize', function() {
-        width = window.innerWidth;
-        height = window.innerHeight / 2;
-        svg.attr('width', width)
-           .attr('height', height);
     
     // Gooey effect filter
     // See http://www.visualcinnamon.com/2016/06/fun-data-visualizations-svg-gooey-effect.html
@@ -176,7 +168,7 @@ Forked      : Ian Johnson; http://bl.ocks.org/enjalot/f973a941606aa38fed321fbce0
     function rasterizeText(text, options) {
     	var o = options || {};
     
-    	var fontSize = "10vw",
+    	var fontSize = o.fontSize || "200px",
     			fontWeight = o.fontWeight || "600",
     			fontFamily = o.fontFamily || "sans-serif",
     			textAlign = o.center || "center",
