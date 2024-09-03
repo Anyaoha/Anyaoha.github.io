@@ -98,13 +98,16 @@ Forked      : Ian Johnson; http://bl.ocks.org/enjalot/f973a941606aa38fed321fbce0
     	.attr("width", width)
     	.attr("height", height);
 
-
-   // Add the resize event listener here  -- Added the chunk below -- Uche
+    
+ // Add the resize event listener here  -- Added the chunk below -- Uche
     window.addEventListener('resize', function() {
         width = window.innerWidth;
         height = window.innerHeight / 2;
         svg.attr('width', width)
            .attr('height', height);
+
+  
+  
     
     // Gooey effect filter
     // See http://www.visualcinnamon.com/2016/06/fun-data-visualizations-svg-gooey-effect.html
